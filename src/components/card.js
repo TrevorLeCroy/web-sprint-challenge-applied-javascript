@@ -44,6 +44,10 @@ const Card = (article) => {
   author      .classList.add('author');
   imgContainer.classList.add('img-container');
 
+  card.addEventListener('click', e => {
+    console.log(article.headline);
+  });
+
   return card;
 }
 
@@ -64,7 +68,6 @@ const cardAppender = (selector) => {
     let articles = res.data.articles;
 
     Object.keys(articles).forEach(articleTopic => {
-
       for(let i = 0; i < Object.values(articles).length; i++) {
         let article = articles[articleTopic][i];
 
