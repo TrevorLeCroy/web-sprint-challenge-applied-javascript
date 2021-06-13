@@ -21,6 +21,7 @@ const Tabs = (topics) => {
   topics.forEach(topic => {
     let newTopicDiv = document.createElement('div');
     newTopicDiv.classList.add('tab');
+    
     newTopicDiv.textContent = topic;
     topicsDiv.appendChild(newTopicDiv);
   });
